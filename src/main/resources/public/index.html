@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Client</title>
+    <link href="css/angular-bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="player">
+<div class="container">
+    <h1>Players</h1>
+    <div ng-controller="home">
+        <div class="col-md-3">
+            <h3>Total players: ({{players.length}})</h3>
+            <a class="list-group-item" ng-click="select(p.playerId)" ng-repeat="p in players">
+                {{p.playerName}}
+            </a>
+        </div>
+        <div class="col-md-9">
+            <h3>Details of: {{selected.name}}</h3>
+            <div class="panel panel-default">
+                <table width="90%">
+                    <tr>
+                        <td width="40%">
+                            Ranking:
+                        </td>
+                        <td width="60%">
+                            {{selected.ranking}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Season Id:
+                        </td>
+                        <td>
+                            {{selected.seasonId}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Season Name:
+                        </td>
+                        <td>
+                            {{selected.seasonName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tournament Id:
+                        </td>
+                        <td>
+                            {{selected.tournamentId}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tournament Region Id:
+                        </td>
+                        <td>
+                            {{selected.tournamentRegionId}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tournament Region Code:
+                        </td>
+                        <td>
+                            {{selected.tournamentRegionCode}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Region Code:
+                        </td>
+                        <td>
+                            {{selected.regionCode}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tournament Name:
+                        </td>
+                        <td>
+                            {{selected.tournamentName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tournament Short Name:
+                        </td>
+                        <td>
+                            {{selected.tournamentShortName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Player Id:
+                        </td>
+                        <td>
+                            {{selected.playerId}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Active:
+                        </td>
+                        <td>
+                            {{selected.isActive}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Opta:
+                        </td>
+                        <td>
+                            {{selected.isOpta}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Team Id:
+                        </td>
+                        <td>
+                            {{selected.teamId}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Team Name:
+                        </td>
+                        <td>
+                            {{selected.teamName}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Played Positions:
+                        </td>
+                        <td>
+                            {{selected.playedPositions}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Age:
+                        </td>
+                        <td>
+                            {{selected.age}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Height:
+                        </td>
+                        <td>
+                            {{selected.height}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Weight:
+                        </td>
+                        <td>
+                            {{selected.weight}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Position Text:
+                        </td>
+                        <td>
+                            {{selected.positionText}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Apps:
+                        </td>
+                        <td>
+                            {{selected.apps}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sub On:
+                        </td>
+                        <td>
+                            {{selected.subOn}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mins Played:
+                        </td>
+                        <td>
+                            {{selected.minsPlayed}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Rating:
+                        </td>
+                        <td>
+                            {{selected.rating}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Goal:
+                        </td>
+                        <td>
+                            {{selected.goal}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Assist Total:
+                        </td>
+                        <td>
+                            {{selected.assistTotal}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Yellow Card:
+                        </td>
+                        <td>
+                            {{selected.yellowCard}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Red Card:
+                        </td>
+                        <td>
+                            {{selected.redCard}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Shots Per Game:
+                        </td>
+                        <td>
+                            {{selected.shotsPerGame}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Aerial Won Per Game:
+                        </td>
+                        <td>
+                            {{selected.aerialWonPerGame}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Man Of The Match:
+                        </td>
+                        <td>
+                            {{selected.manOfTheMatch}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            {{selected.name}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Is Man Of The Match?:
+                        </td>
+                        <td>
+                            {{selected.isManOfTheMatch}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Played Positions Short:
+                        </td>
+                        <td>
+                            {{selected.playedPositionsShort}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pass Success:
+                        </td>
+                        <td>
+                            {{selected.passSuccess}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/angular-bootstrap.js" type="text/javascript"></script>
+<script src="js/player.js"></script>
+</body>
+</html>

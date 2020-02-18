@@ -2,7 +2,7 @@
 
 `Minimum requirements`
 
-- This project requires JVM 1.8
+- This project requires JVM 11
 - Maven 3 or higher version, if not installed then this can be installed from
 
     - brew install maven (in Mac OS)
